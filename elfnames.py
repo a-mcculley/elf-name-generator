@@ -4,12 +4,12 @@ nm1 = [["Âr", "Royal/Noble"], ["Êg", "Thorn"], ["Êl", "Star"], ["Îdh", "Rest
 #nm2 is the list of only the prefixes of the form "To blank"
 nm2 = [["Gal", "To Shine Clear"], ["Gwathra", "To Overshadow"], ["Míria", "To Shine"], ["Síla", "To Shine White"], ["Thilia", "To Glisten"], ["Tinna", "To Glint"], ["Banga", "To Trade"], ["Achar", "To Avenge"], ["Adertha", "To Reunite"], ["Aphada", "To Follow"], ["Beria", "To Protect"], ["Brona", "To Survive"], ["Northa", "To Make Run/Ride"], ["Suila", "To Greet"], ["Toltha", "To Fetch/Make Come"], ["Tortha", "To Wield/Control"], ["Bartha", "To Doom"], ["Trasta", "To Harass/Trouble"], ["Trenar", "To Recount"], ["Trevad", "To Traverse"], ["Tir", "To Watch/Gaze"], ["Feira", "To Suffice"], ["Taetha", "To Fasten/Tie"], ["Fara", "To Hunt"], ["Tangada", "To Make Firm"], ["Toba", "To Cover/Roof"], ["Telia", "To Play"], ["Ertha", "To Unite"], ["Heria", "To Have an Impulse"], ["Tog", "To Lead/Bring"], ["Than", "To Kindle"], ["Nasta", "To Prick/Thrust"], ["Teitha", "To Draw/Write"], ["Hwinia", "To Twirl/Whirl"], ["Theria", "To Dread/Fear"], ["Theria", "To Flourish"], ["Thosta", "To Stink"], ["Henia", "To Understand"], ["Sog", "To Drink"], ["Ran", "To Wander/Stray"], ["Rosta", "To Hollow Out"], ["Nella", "To Ring Bells"], ["Ruthra", "To Rage"], ["Rista", "To Rend/Rip/Cut/Cleave"], ["Ritha", "To Jerk/Twitch/Snatch"], ["Redh", "To Sow"], ["Rib", "To Rush/Fly/Fling"], ["Renia", "To Stray/Wander"], ["Revia", "To Fly/Sail/Wander"], ["Oltha", "To Dream"], ["Raitha", "To Strive"], ["Pada", "To Walk"], ["Rada", "To Make/Find a Way"], ["Raeda", "To Catch in a Net"], ["Penia", "To Fix/Set"], ["Presta", "To Affect/Disrupt"], ["Pel", "To Fade/Wither"], ["Padra", "To Walk"], ["Lacha", "To Burn"], ["Ped", "To Say/Speak"], ["Nesta", "To Heal"], ["Nod", "To Tie/Bind"], ["Orthel", "To Roof"], ["Orthor", "To Master/Conquer"], ["Osgar", "To Amputate"], ["Nor", "To Run"], ["Nautha", "To Conceive a Thought"], ["Nedia", "To Count"], ["Neitha", "To Wrong/Deprive"], ["Hortha", "To Urge On/Impel"], ["Lasta", "To Listen"], ["Maetha", "To Fight"], ["Maetha", "To Handle/Wield"], ["Dew", "To Fail"], ["Nartha", "To Kindle"], ["Muda", "To Labor/Work"], ["Naegra", "To Cause Pain"], ["Nara", "To Narrate/Tell a Story"], ["Narcha", "To Rend/Rip/Tear"], ["Mad", "To Eat"], ["Ialla", "To Call/Yell"], ["Nag", "To Bite"], ["Nalla", "To Cry Out/Shout"], ["Iuitha", "To Use"], ["Mista", "To Stray/Be Mistaken"], ["Leitha", "To Set Free"], ["Loda", "To Float"], ["Linna", "To Chant"], ["Liria", "To Sing"], ["Laba", "To Hop"], ["Ista", "To Know"], ["Gad", "To Catch"], ["Gonod", "To Count Up/Sum Up"], ["Glavra", "To Babble"], ["Lútha", "To Enchant"], ["Gweria", "To Betray/Cheat"], ["Heb", "To Keep"], ["Harna", "To Wound"], ["Hartha", "To Hope"], ["Hasta", "To Hack Through"], ["Gwesta", "To Swear/Oath"], ["Can", "To Shout"], ["Groga", "To be Terrified"], ["Had", "To Hurl/Throw/Sling"], ["Basta", "To Bake Bread"], ["Gruitha", "To Terrify"], ["Gwedh", "To Bind"], ["Gladh", "To Laugh"], ["Gosta", "To Fear"], ["Carva", "To Talk"], ["Glir", "To Sing/Recite Poetry"], ["Gala", "To Grow/Cultivate"], ["Ganna", "To Play a Harp"], ["Feria", "To Prepare"], ["Doltha", "To Conceal"], ["Gir", "To Shudder/Tremble"], ["Esta", "To Name/Call"], ["Critha", "To Reap"], ["Elia", "To Bless/Help Out"], ["Draf", "To Hew"], ["Echad", "To Make/Fashion"], ["Eitha", "To Ease/Assist"], ["Eitha", "To Prick/Insult"], ["Egleria", "To Praise"], ["Def", "To Try"], ["Dreg", "To Flee/Run Away"], ["Dringa", "To Beat"], ["Damma", "To Hammer"], ["Delia", "To Conceal"], ["Cen", "To See"], ["Brenia", "To Endure"], ["Bertha", "To Dare"], ["Dag", "To Slay"], ["Cab", "To Leap"], ["Aphed", "To Answer"], ["Amartha", "To Decree"], ["Awartha", "To Forsake/Abandon"], ["Adleg", "To Loose/Release"]]
 #nm3 is a list which gets filled in later (after a gender check and checking what is appropriate based on the ending of the previous name sections/what conjugation is needed from the other name sections)
-# a name is created by taking an item from nm1 or nm2 and then nm3,  with some extra formatting
+# a name is created by taking an item from nm1 or nm2 and then nm3, with some extra formatting
 nm3 = [["", "", ""]]
 #last char is needed to figure out appropriate nm3
 lastChar = ""
 lastTwoChar = ""
-#type/tp is inputted to the function. 1 = female,  2 = neutral,  0 = male
+#type/tp is inputted to the function. 1 = female, 2 = neutral, 0 = male
 tp = 0 
 f = open('elfnames.txt', 'w')
 
@@ -18,7 +18,7 @@ count = 0
 for j in nm1:
     lastChar = j[0][-1]
     lastTwoChar = j[0][-2:]
-    for tp in range(0, 3) :
+    for tp in range(0, 3):
         if(tp == 1):
             if lastChar == "a":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ahel"], ["gwend", "Maiden", "awen"], ["neth", "Girl", "aneth"], ["dîs", "Bride", "anis"], ["dess", "Woman", "anes"], ["nîth", "Sister", "anith"], ["thêl", "Sister", "athel"], ["bess", "Wife", "aves"]]
@@ -26,22 +26,22 @@ for j in nm1:
             elif lastChar == "e":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ehel"], ["gwend", "Maiden", "ewen"], ["neth", "Girl", "eneth"], ["dîs", "Bride", "enis"], ["dess", "Woman", "enes"], ["nîth", "Sister", "enith"], ["thêl", "Sister", "ethel"], ["bess", "Wife", "eves"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "i":
+            elif lastChar == "i":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ihel"], ["gwend", "Maiden", "iwen"], ["neth", "Girl", "ineth"], ["dîs", "Bride", "inis"], ["dess", "Woman", "ines"], ["nîth", "Sister", "inith"], ["thêl", "Sister", "ithel"], ["bess", "Wife", "ives"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "o":
+            elif lastChar == "o":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ohel"], ["gwend", "Maiden", "owen"], ["neth", "Girl", "oneth"], ["dîs", "Bride", "onis"], ["dess", "Woman", "ones"], ["nîth", "Sister", "onith"], ["thêl", "Sister", "othel"], ["bess", "Wife", "oves"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "u":
+            elif lastChar == "u":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "uhel"], ["gwend", "Maiden", "uwen"], ["neth", "Girl", "uneth"], ["dîs", "Bride", "unis"], ["dess", "Woman", "unes"], ["nîth", "Sister", "unith"], ["thêl", "Sister", "uthel"], ["bess", "Wife", "uves"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "b":
+            elif lastChar == "b":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["bess", "Wife", "es"]]
                 name1 = j[0]
-            elif lastChar ==  "c":
+            elif lastChar == "c":
                 nm3 = [["eth", "Female", "geth"], ["el", "Female", "gel"], ["il", "Female", "gil"], ["ien", "Daughter of", "gien"], ["iell", "Daughter of", "giel"], ["gwend", "Maiden", "gwen"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "d":
+            elif lastChar == "d":
                 if(lastTwoChar == "nd"):
                     nm3 = [["eth", "Female", "neth"], ["el", "Female", "nel"], ["il", "Female", "nil"], ["ien", "Daughter of", "nien"], ["iell", "Daughter of", "niel"], ["sell", "Girl", "hel"], ["gwend", "Maiden", "gwen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["nîth", "Sister", "nith"], ["thêl", "Sister", "thel"], ["bess", "Wife", "bes"]]
                     name1 = j[0][:-1]
@@ -51,47 +51,47 @@ for j in nm1:
             elif lastChar == "f":
                 nm3 = [["eth", "Female", "veth"], ["el", "Female", "vel"], ["il", "Female", "vil"], ["ien", "Daughter of", "vien"], ["iell", "Daughter of", "viel"], ["bess", "Wife", "ves"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "g":
+            elif lastChar == "g":
                 nm3 = [["eth", "Female", "geth"], ["el", "Female", "gel"], ["il", "Female", "gil"], ["ien", "Daughter of", "gien"], ["iell", "Daughter of", "giel"], ["sell", "Girl", "gel"], ["gwend", "Maiden", "gwen"], ["neth", "Girl", "gneth"], ["dîs", "Bride", "gnis"], ["dess", "Woman", "gnes"], ["nîth", "Sister", "gnith"], ["thêl", "Sister", "cthel"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "h":
+            elif lastChar == "h":
                 if(lastTwoChar == "ch"):
                     nm3 = [["eth", "Female", "eth"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "el"]]
                     name1 = j[0]
                 else:
                     nm3 = [["eth", "Female", "es"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "el"], ["thêl", "Sister", "el"]]
                     name1 = j[0]
-            elif lastChar ==  "l":
+            elif lastChar == "l":
                 if(lastTwoChar == "ll"):
                     nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "hel"], ["gwend", "Maiden", "wen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["nîth", "Sister", "nith"], ["thêl", "Sister", "thel"], ["bess", "Wife", "bes"]]
                     name1 = j[0][:-1]
                 else:
                     nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "hel"], ["gwend", "Maiden", "wen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["nîth", "Sister", "nith"], ["thêl", "Sister", "thel"], ["bess", "Wife", "bes"]]
                     name1 = j[0]
-            elif lastChar ==  "m":
+            elif lastChar == "m":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["bess", "Wife", "bes"]]
                 name1 = j[0]
-            elif lastChar ==  "n":
+            elif lastChar == "n":
                 nm3 = [["eth", "Female", "neth"], ["el", "Female", "nel"], ["il", "Female", "nil"], ["ien", "Daughter of", "nien"], ["iell", "Daughter of", "niel"], ["sell", "Girl", "ssel"], ["gwend", "Maiden", "ngwen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "ndis"], ["dess", "Woman", "ndes"], ["nîth", "Sister", "nith"], ["thêl", "Sister", "nthel"], ["bess", "Wife", "mes"]]
                 name1 = j[0][:-1]
-            elif lastChar ==  "p":
+            elif lastChar == "p":
                 if(lastTwoChar == "mp"):
                     nm3 = [["eth", "Female", "meth"], ["el", "Female", "mel"], ["il", "Female", "mil"], ["ien", "Daughter of", "mien"], ["iell", "Daughter of", "miel"], ["sell", "Girl", "hel"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["bess", "Wife", "bes"]]
                     name1 = j[0][:-1]
                 else:
                     nm3 = [["eth", "Female", "beth"], ["el", "Female", "bel"], ["il", "Female", "bil"], ["ien", "Daughter of", "bien"], ["iell", "Daughter of", "biel"], ["bess", "Wife", "bes"]]
                     name1 = j[0][:-1]
-            elif lastChar ==  "r":
+            elif lastChar == "r":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "hel"], ["gwend", "Maiden", "wen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["nîth", "Sister", "nith"], ["thêl", "Sister", "thel"], ["bess", "Wife", "bes"]]
                 name1 = j[0]
-            elif lastChar ==  "s":
+            elif lastChar == "s":
                 if(lastTwoChar == "ss"):
                     nm3 = [["eth", "Female", "seth"], ["el", "Female", "sel"], ["il", "Female", "sil"], ["ien", "Daughter of", "sien"], ["iell", "Daughter of", "siel"], ["sell", "Girl", "sel"], ["gwend", "Maiden", "sengwen"], ["neth", "Girl", "seneth"], ["dîs", "Bride", "sendis"], ["dess", "Woman", "sendes"], ["nîth", "Sister", "senith"], ["thêl", "Sister", "senthel"], ["bess", "Wife", "semes"]]
                     name1 = j[0][:-1]
                 else:
                     nm3 = [["eth", "Female", "seth"], ["el", "Female", "sel"], ["il", "Female", "sil"], ["ien", "Daughter of", "sien"], ["iell", "Daughter of", "siel"], ["sell", "Girl", "sel"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["bess", "Wife", "bes"]]
                     name1 = j[0]
-            elif lastChar ==  "t":
+            elif lastChar == "t":
                 if(lastTwoChar == "lt"):
                     nm3 = [["eth", "Female", "eth"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["gwend", "Maiden", "wen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "dis"], ["dess", "Woman", "des"], ["nîth", "Sister", "nith"], ["bess", "Wife", "ves"]]
                     name1 = j[0][:-1]
@@ -101,7 +101,7 @@ for j in nm1:
                 else:
                     nm3 = [["eth", "Female", "teth"], ["el", "Female", "tel"], ["il", "Female", "til"], ["ien", "Daughter of", "tien"], ["iell", "Daughter of", "tiel"], ["sell", "Girl", "sel"]]
                     name1 = j[0][:-1]
-            elif lastChar ==  "w":
+            elif lastChar == "w":
                 nm3 = [["eth", "Female", "weth"], ["el", "Female", "wel"], ["il", "Female", "wil"], ["ien", "Daughter of", "wien"], ["iell", "Daughter of", "wiel"], ["sell", "Girl", "hel"], ["gwend", "Maiden", "wen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "nis"], ["dess", "Woman", "nes"], ["nîth", "Sister", "nith"], ["thêl", "Sister", "thel"], ["bess", "Wife", "ves"]]
                 name1 = j[0][:-1]
         elif(tp == 2):
