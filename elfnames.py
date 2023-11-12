@@ -20,19 +20,19 @@ for j in nm1:
     lastTwoChar = j[0][-2:]
     for tp in range(0, 3):
         if(tp == 1):
-            if lastChar == "a":
+            if lastChar == "a" or lastChar == "â":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ahel"], ["gwend", "Maiden", "awen"], ["neth", "Girl", "aneth"], ["dîs", "Bride", "anis"], ["dess", "Woman", "anes"], ["nîth", "Sister", "anith"], ["thêl", "Sister", "athel"], ["bess", "Wife", "aves"]]
                 name1 = j[0][:-1]
-            elif lastChar == "e":
+            elif lastChar == "e" or lastChar == "ê":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ehel"], ["gwend", "Maiden", "ewen"], ["neth", "Girl", "eneth"], ["dîs", "Bride", "enis"], ["dess", "Woman", "enes"], ["nîth", "Sister", "enith"], ["thêl", "Sister", "ethel"], ["bess", "Wife", "eves"]]
                 name1 = j[0][:-1]
-            elif lastChar == "i":
+            elif lastChar == "i" or lastChar == "í" or lastChar == "î":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ihel"], ["gwend", "Maiden", "iwen"], ["neth", "Girl", "ineth"], ["dîs", "Bride", "inis"], ["dess", "Woman", "ines"], ["nîth", "Sister", "inith"], ["thêl", "Sister", "ithel"], ["bess", "Wife", "ives"]]
                 name1 = j[0][:-1]
-            elif lastChar == "o":
+            elif lastChar == "o" or lastChar == "ô":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "ohel"], ["gwend", "Maiden", "owen"], ["neth", "Girl", "oneth"], ["dîs", "Bride", "onis"], ["dess", "Woman", "ones"], ["nîth", "Sister", "onith"], ["thêl", "Sister", "othel"], ["bess", "Wife", "oves"]]
                 name1 = j[0][:-1]
-            elif lastChar == "u":
+            elif lastChar == "u" or lastChar == "û":
                 nm3 = [["eth", "Female", "eth"], ["el", "Female", "el"], ["il", "Female", "il"], ["ien", "Daughter of", "ien"], ["iell", "Daughter of", "iel"], ["sell", "Girl", "uhel"], ["gwend", "Maiden", "uwen"], ["neth", "Girl", "uneth"], ["dîs", "Bride", "unis"], ["dess", "Woman", "unes"], ["nîth", "Sister", "unith"], ["thêl", "Sister", "uthel"], ["bess", "Wife", "uves"]]
                 name1 = j[0][:-1]
             elif lastChar == "b":
@@ -105,19 +105,19 @@ for j in nm1:
                 nm3 = [["eth", "Female", "weth"], ["el", "Female", "wel"], ["il", "Female", "wil"], ["ien", "Daughter of", "wien"], ["iell", "Daughter of", "wiel"], ["sell", "Girl", "hel"], ["gwend", "Maiden", "wen"], ["neth", "Girl", "neth"], ["dîs", "Bride", "nis"], ["dess", "Woman", "nes"], ["nîth", "Sister", "nith"], ["thêl", "Sister", "thel"], ["bess", "Wife", "ves"]]
                 name1 = j[0][:-1]
         elif(tp == 2):
-            if lastChar == "a":
+            if lastChar == "a" or lastChar == "â":
                 nm3 = [["pen", "Person", "ben"], ["", "", ""]]
                 name1 = j[0]
-            elif lastChar == "e":
+            elif lastChar == "e" or lastChar == "ê":
                 nm3 = [["pen", "Person", "ben"], ["", "", ""]]
                 name1 = j[0]
-            elif lastChar == "i":
+            elif lastChar == "i" or lastChar == "í" or lastChar == "î":
                 nm3 = [["pen", "Person", "ben"], ["", "", ""]]
                 name1 = j[0]
-            elif lastChar == "o":
+            elif lastChar == "o" or lastChar == "ô":
                 nm3 = [["pen", "Person", "ben"], ["", "", ""]]
                 name1 = j[0]
-            elif lastChar == "u":
+            elif lastChar == "u" or lastChar == "û":
                 nm3 = [["pen", "Person", "ben"], ["", "", ""]]
                 name1 = j[0]
             elif lastChar == "b":
@@ -190,19 +190,19 @@ for j in nm1:
                 nm3 = [["", "", ""]]
                 name1 = j[0]
         else:
-            if lastChar == "a":
+            if lastChar == "a" or lastChar == "â":
                 nm3 = [["daer", "Groom", "naer"], ["dir", "Man", "nir"], ["benn", "Husband", "ven"], ["tôr", "Brother", "dor"], ["hawn", "Brother", "chon"], ["hanar", "Brother", "chanar"]]
                 name1 = j[0]
-            elif lastChar == "e":
+            elif lastChar == "e" or lastChar == "ê":
                 nm3 = [["daer", "Groom", "naer"], ["dir", "Man", "nir"], ["benn", "Husband", "ven"], ["tôr", "Brother", "dor"], ["hawn", "Brother", "chon"], ["hanar", "Brother", "chanar"]]
                 name1 = j[0]
-            elif lastChar == "i":
+            elif lastChar == "i" or lastChar == "í" or lastChar == "î":
                 nm3 = [["daer", "Groom", "naer"], ["dir", "Man", "nir"], ["benn", "Husband", "ven"], ["tôr", "Brother", "dor"], ["hawn", "Brother", "chon"], ["hanar", "Brother", "chanar"]]
                 name1 = j[0]
-            elif lastChar == "o":
+            elif lastChar == "o" or lastChar == "ô":
                 nm3 = [["daer", "Groom", "naer"], ["dir", "Man", "nir"], ["benn", "Husband", "ven"], ["tôr", "Brother", "dor"], ["hawn", "Brother", "chon"], ["hanar", "Brother", "chanar"]]
                 name1 = j[0]
-            elif lastChar == "u":
+            elif lastChar == "u" or lastChar == "û":
                 nm3 = [["daer", "Groom", "naer"], ["dir", "Man", "nir"], ["benn", "Husband", "ven"], ["tôr", "Brother", "dor"], ["hawn", "Brother", "chon"], ["hanar", "Brother", "chanar"]]
                 name1 = j[0]
             elif lastChar == "b":
@@ -279,7 +279,7 @@ for j in nm2:
     lastTwoChar = j[0][-2:]
     for tp in range(0, 3):
         if tp == 1:
-            if lastChar == "a":
+            if lastChar == "a" or lastChar == "â":
                 nm3 = [["ril", "Female", "ril"], ["dis", "Female", "adis"], ["iell", "Daughter of", "riel"], ["ien", "Daughter of", "rien"]]
                 name2 = j[0][:-1]
             elif lastChar == "b":
@@ -310,7 +310,7 @@ for j in nm2:
                 nm3 = [["ril", "Female", "il"], ["dis", "Female", "dis"], ["iell", "Daughter of", "iel"], ["ien", "Daughter of", "ien"]]
                 name2 = j[0]
         elif(tp == 2):
-            if lastChar == "a":
+            if lastChar == "a" or lastChar == "â":
                 nm3 = [["or", "Person", "or"]]
                 name2 = j[0][:-1]
             elif lastChar == "b":
@@ -341,7 +341,7 @@ for j in nm2:
                 nm3 = [["or", "Person", "or"]]
                 name2 = j[0]
         else:
-            if lastChar == "a":
+            if lastChar == "a" or lastChar == "â":
                 nm3 = [["on", "Male", "on"], ["dir", "Male", "edir"], ["ron", "Male", "on"], ["ion", "Son of", "ion"]]
                 name2 = j[0][:-1]
             elif lastChar == "b":
